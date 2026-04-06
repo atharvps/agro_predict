@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroPredict | AI Crop Yield</title>
+    <!-- Attractive Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Agro<span>Predict</span>
+        </div>
+        
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+        <div class="prediction-card">
+            <div class="card-header">
+                <h2>Crop Yield Estimator</h2>
+                <p>Enter data below. Values are dynamically bounded by the dataset limits.</p>
+            </div>
+
+            <form id="prediction-form">
+                <div class="input-group">
+                    <label for="state">State</label>
+                    <select id="state" required>
+                        <option value="" disabled selected>Select State</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="district">District</label>
+                    <select id="district" required disabled>
+                        <option value="" disabled selected>Select State First</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="crop">Crop</label>
+                    <select id="crop" required>
+                        <option value="" disabled selected>Select Crop</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="season">Season</label>
+                    <select id="season" required>
+                        <option value="" disabled selected>Select Season</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="area">Farm Area (Hectares)</label>
+                    <input type="number" id="area" placeholder="e.g., 2500" step="0.1" min="0.1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="rainfall">Rainfall (mm) <span id="rain-bounds" class="bounds-text"></span></label>
+                    <input type="number" id="rainfall" placeholder="Validating bounds..." step="any" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="temperature">Temperature (°C) <span id="temp-bounds" class="bounds-text"></span></label>
+                    <input type="number" id="temperature" placeholder="Validating bounds..." step="any" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="year">Crop Year</label>
+                    <input type="number" id="year" placeholder="e.g., 2024" min="1900" max="2100" required>
+                </div>
+
+                <div class="input-group full-width">
+                    <button type="submit" class="btn-submit" id="submit-btn">
+                        <span class="spinner" id="spinner"></span>
+                        <span id="btn-text">Predict Yield</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-container" class="result-box"></div>
+        </div>
+    </main>
+
+    <!-- Load the generated config file FIRST -->
+    <script src="config.js"></script>
+    <!-- Load the main application logic -->
+    <script src="script.js"></script>
+</body>
+</html>
