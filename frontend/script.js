@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- 3. API SUBMISSION ---
     // ⚠️ UPDATE THIS WHEN YOU DEPLOY YOUR BACKEND (e.g., https://your-render-url.com/predict)
-    const API_URL = "http://127.0.0.1:8000/predict"; 
+    const API_URL = "https://agro-predict-ra0y.onrender.com/"; 
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
