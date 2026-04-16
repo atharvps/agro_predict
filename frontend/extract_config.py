@@ -71,7 +71,7 @@ def generate_frontend_config():
                     "max": math.ceil(max(rainfalls))
                 },
                 "temperature": {
-                    "min": math.floor(max(temperatures)),
+                    "min": math.floor(min(temperatures)),
                     "max": math.ceil(max(temperatures))
                 }
             }

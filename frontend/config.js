@@ -915,12 +915,12 @@ const CONFIG = {
     ],
     "bounds": {
         "rainfall": {
-            "min": 0.0,
-            "max": 2116.08
+            "min": 0,
+            "max": 2117
         },
         "temperature": {
-            "min": 3.49,
-            "max": 50.71
+            "min": 3,
+            "max": 51
         }
     }
 };
