@@ -25,9 +25,9 @@ def build_and_save_model():
     max_feat = max(1, int(math.sqrt(num_features)))
     
     rf_model = RandomForestRegressor(
-        n_trees=5,               
+        n_trees=8,               
         max_depth=12,            
-        min_samples_split=15,    
+        min_samples_split=50,    
         max_features=max_feat,   
         num_thresholds=10        
     )

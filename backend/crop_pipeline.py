@@ -461,9 +461,9 @@ if __name__ == "__main__":
     # Note: Reduced n_trees to 5 for demonstration so the pure python script completes 
     # within minutes rather than hours on 350k rows. Increase for higher accuracy.
     rf_model = RandomForestRegressor(
-        n_trees=5,               
+        n_trees=8,               
         max_depth=12,            
-        min_samples_split=15,    
+        min_samples_split=50,    
         max_features=max_feat,   
         num_thresholds=10        
     )
